@@ -1,0 +1,146 @@
+/* font from google fonts - jost */
+@font-face {
+  font-family: 'Jost';
+  src: url('fonts/Jost-VariableFont_wght.ttf') format('truetype'),
+    url('fonts/OFL.txt') format('woff')
+}
+
+/* font styling for all text */
+* {
+  font-family: 'Jost', sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+.body-background {
+  background: #FDE2AB;
+}
+
+
+.title-background {
+  background: #8ADCFF;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.title-text {
+  color: #232323;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.decks-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-items:baseline;
+}
+
+.side-box {
+  display: flex;
+  width: 150px;
+  height: 400px;
+  border: 1px solid #000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.left-box {
+  background: #2BBFFF;
+}
+
+.right-box {
+  background: #FABC3D;
+}
+
+.center-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dj-image {
+  width: 200px;
+}
+
+.status-type-text {
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.status-value-text {
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.status-bar {
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.left-status-bar {
+  display:flex;
+  justify-content: flex-start;
+  background: #2BBFFF;
+}
+
+.left-status-filler {
+  background: #2BBFFF;
+  height: 100%;
+  width: 2px;
+  margin-left: -2px
+}
+
+.right-status-bar {
+  display:flex;
+  justify-content: flex-end;
+  background: #FABC3D;
+  /* bring to frong to cover border */
+  position:relative;
+  z-index: 1;
+}
+
+.right-status-filler {
+  background: #FABC3D;
+  height: 100%;
+  width: 2px;
+  margin-right: -2px;
+}
+
+
+.deck-image {
+  width: 100px;
+  height: 100px;
+}
+
+.record-image {
+  width: 100px;
+  height: 100px;
+}
+
+.deck-title {
+  color: #141217;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
