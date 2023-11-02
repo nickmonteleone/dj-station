@@ -89,6 +89,13 @@
   line-height: normal;
 }
 
+.status-box{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .status-bar {
   width: 100%;
   height: 40px;
@@ -152,4 +159,9 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.status-type-bar{
+ display: flex;
+ align-items: center
 }

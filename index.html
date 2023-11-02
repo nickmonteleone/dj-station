@@ -31,51 +31,64 @@
     <div class="center-box">
 
       <img class="dj-image" src="images/dj.png">
-      <div class="status-text-light">
-        Now playing:
-        <span class="status-text-bold" id="now-playing-text">
-          Deck A
-        </span>
-      </div>
 
-      <div class="status-bar left-status-bar">
-        <div class="left-status-filler"></div>
-        <div class="status-bar-text-box">
-          <div class="status-text-light">
-            <span class="status-text-light" id="a-bpm">126.4</span> BPM
+      <div class="status-box" id="a-status-box">
+        <div class="status-type-bar">
+          <div class="status-text-light" id="a-status">
+            Now playing:
           </div>
-          <div class="status-text-light">
-            Key: <span class="status-text-light" id="a-key">G#</span>
+          <div class="status-text-bold">
+            &nbsp;Deck A
+          </div>
+        </div>
+        <div class="status-bar left-status-bar">
+          <div class="left-status-filler"></div>
+          <div class="status-bar-text-box">
+            <div class="status-text-light">
+              <span class="status-text-light" id="a-bpm">126.4</span>
+               BPM
+            </div>
+            <div class="status-text-light">
+              Key: <span class="status-text-light" id="a-key">G#</span>
+            </div>
           </div>
         </div>
       </div>
+
       <br>
-      <button type="submit" class="btn btn-primary">Swap play/cue</button>
+      <button type="submit" class="btn btn-primary" id="swap-button">
+        Swap play/cue
+      </button>
       <br>
 
-      <div class="status-type-status-bar">
-        In the cue:
-        <span class="status-text-bold" id="cue-text">
-          Deck B
-        </span>
-      </div>
-
-      <div class="status-bar right-status-bar">
-        <div class="status-bar-text-box">
-          <div class="status-text-light">
-            <span class="status-text-light" id="b-bpm">127.2</span> BPM
+      <div class="status-box" id="b-status-box">
+        <div class="status-type-bar">
+          <div class="status-text-light" id="b-status">
+            In the cue:
           </div>
-          <div class="status-text-light">
-            Key: <span class="status-text-light" id="b-key">A</span>
+          <div class="status-text-bold" >
+            &nbsp;Deck B
           </div>
         </div>
-        <div class="right-status-filler"></div>
+        <div class="status-bar right-status-bar">
+          <div class="status-bar-text-box">
+            <div class="status-text-light">
+              <span class="status-text-light" id="b-bpm">127.2</span>
+               BPM
+            </div>
+            <div class="status-text-light">
+              Key: <span class="status-text-light" id="b-key">A</span>
+            </div>
+          </div>
+          <div class="right-status-filler"></div>
+        </div>
       </div>
+
       <br>
 
-      <form class="px-4 py-3">
-        <input type="email" class="form-control" id="deck-select" placeholder="song">
-        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="artist">
+      <form class="px-4 py-3" autocomplete="off">
+        <input class="form-control" id="deck-select" placeholder="song">
+        <input class="form-control" id="exampleDropdownFormPassword1" placeholder="artist">
         <button type="submit" class="btn btn-primary">Add to cue</button>
       </form>
 
@@ -88,6 +101,10 @@
       <div class="deck-title">Deck B</div>
     </div>
   </section>
+
+
+  <script src="dj-station.js"></script>
+
 
 </body>
 
