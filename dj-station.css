@@ -40,7 +40,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  align-items:baseline;
+  align-items: baseline;
 }
 
 .side-box {
@@ -71,7 +71,7 @@
   width: 200px;
 }
 
-.status-type-text {
+.status-text-light {
   color: #000;
   text-align: center;
   font-size: 18px;
@@ -80,7 +80,7 @@
   line-height: normal;
 }
 
-.status-value-text {
+.status-text-bold {
   color: #000;
   text-align: center;
   font-size: 18px;
@@ -97,7 +97,7 @@
 }
 
 .left-status-bar {
-  display:flex;
+  display: flex;
   justify-content: flex-start;
   background: #2BBFFF;
 }
@@ -110,11 +110,11 @@
 }
 
 .right-status-bar {
-  display:flex;
+  display: flex;
   justify-content: flex-end;
   background: #FABC3D;
   /* bring to frong to cover border */
-  position:relative;
+  position: relative;
   z-index: 1;
 }
 
@@ -129,6 +129,8 @@
 .deck-image {
   width: 100px;
   height: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .record-image {
@@ -143,4 +145,11 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+.status-bar-text-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
