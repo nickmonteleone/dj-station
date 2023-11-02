@@ -13,12 +13,15 @@
 }
 
 .body-background {
-  background: #FDE2AB;
+  /* commented out color for deck a/b background */
+  /* background: #FDE2AB; */
+  /* background: #8ADCFF; */
+  background: #d6d6d6;
 }
 
 
 .title-background {
-  background: #8ADCFF;
+  background: #9eaaaf;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -69,7 +72,33 @@
 
 .dj-image {
   width: 200px;
+  transform: scaleX(1);
 }
+
+.cover-art {
+  width: 80px;
+  height: 80px;
+  border: 0.5px solid #000;
+}
+
+.song-text {
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.artist-text {
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
 
 .status-text-light {
   color: #000;
@@ -163,5 +192,6 @@
 
 .status-type-bar{
  display: flex;
- align-items: center
+ align-items: center;
 }
+
