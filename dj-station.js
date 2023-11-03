@@ -22,8 +22,7 @@ const bStatusBox = document.getElementById("b-status-box");
 const djImage = document.getElementById('dj-image');
 
 // global variables for cue deck, start at B
-let bInCue = true;
-let aInCue = false;
+let inCue = 'b'
 
 /** Swap status text and change order of status bars */
 function swapDecks() {
@@ -35,29 +34,30 @@ function swapDecks() {
   if (prevAstatus == "In the cue:"){
     aStatusBox.after(bStatusBox);
     djImage.style.transform = 'scaleX(1)'
+    inCue = 'b';
   }
   // move b from cue to play
   else {
     bStatusBox.after(aStatusBox);
     djImage.style.transform = 'scaleX(-1)';
+    inCue = 'a';
   }
-  // flip cue statuses
-  aInCue = !aInCue;
-  bInCue = !bInCue;
 }
 
 /** Add song using form entry */
 function addNextSong(event) {
   event.preventDefault();
-  console.log('adding song');
-  // if no song then don't proceed
-  if (songSelect.value.length == 0){
-    console.log('no song name entered');
-    addSongResult.innerText = "No song provided."
-    return;
+  // update each field with form input value
+  const idPrefixes = ['song', 'artist', 'bpm', 'key'];
+  const formInputs = [songSelect.value, artistSelect.value,
+    bpmSelect.value, keySelect.value];
+  for (let i=0; i < formInputs.length; i++){
+    let elementToUpdate = document.getElementById(`${idPrefixes[i]}-${inCue}`);
+    if (formInputs[i].length == 0) formInputs[i] = '-';
+    elementToUpdate.innerText = formInputs[i];
   }
-  for (let item of [songSelect, artistSelect, bpmSelect, keySelect]){
-    console.log(item.value);
-  }
+  addSongResult.innerText = `Song added to Deck ${inCue.toUpperCase()}`
+  // reset form
+  form.reset()
 }
 

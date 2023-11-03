@@ -54,11 +54,11 @@
           <div class="left-status-filler"></div>
           <div class="status-bar-text-box">
             <div class="status-text-light">
-              <span class="status-text-light" id="a-bpm">126.4</span>
+              <span class="status-text-light" id="bpm-a">126.4</span>
                BPM
             </div>
             <div class="status-text-light">
-              Key: <span class="status-text-light" id="a-key">G#</span>
+              Key: <span class="status-text-light" id="key-a">G#</span>
             </div>
           </div>
         </div>
@@ -76,11 +76,11 @@
         <div class="status-bar right-status-bar">
           <div class="status-bar-text-box">
             <div class="status-text-light">
-              <span class="status-text-light" id="b-bpm">127.2</span>
+              <span class="status-text-light" id="bpm-b">127.2</span>
                BPM
             </div>
             <div class="status-text-light">
-              Key: <span class="status-text-light" id="b-key">A</span>
+              Key: <span class="status-text-light" id="key-b">A</span>
             </div>
           </div>
           <div class="right-status-filler"></div>
@@ -97,10 +97,10 @@
          Add next song:
       </div>
       <form class="song-form" autocomplete="off">
-        <input class="form-control" id="song-select" placeholder="song">
-        <input class="form-control" id="artist-select" placeholder="artist">
-        <input class="form-control" id="bpm-select" placeholder="BPM">
-        <input class="form-control" id="key-select" placeholder="key">
+        <input type="text" class="form-control" id="song-select" placeholder="song" required="true">
+        <input type="text" class="form-control" id="artist-select" placeholder="artist">
+        <input type="number" step="0.1" class="form-control" id="bpm-select" placeholder="BPM">
+        <input type="text" class="form-control" id="key-select" placeholder="key">
         <button type="submit" class="btn btn-dark click">send to cue</button>
       </form>
       <div class="status-text-light" id="add-song-result">
