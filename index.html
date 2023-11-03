@@ -88,17 +88,23 @@
         <br>
       </div>
 
-      <br>
-      <button type="submit" class="btn btn-primary" id="swap-button">
-        Swap play/cue
+     <button type="submit" class="btn btn-dark click" id="swap-button">
+        swap play/cue
       </button>
       <br>
 
-      <form class="px-4 py-3" autocomplete="off">
-        <input class="form-control" id="deck-select" placeholder="song">
-        <input class="form-control" id="exampleDropdownFormPassword1" placeholder="artist">
-        <button type="submit" class="btn btn-primary">Add to cue</button>
+      <div class="status-text-light">
+         Add next song:
+      </div>
+      <form class="song-form" autocomplete="off">
+        <input class="form-control" id="song-select" placeholder="song">
+        <input class="form-control" id="artist-select" placeholder="artist">
+        <input class="form-control" id="bpm-select" placeholder="BPM">
+        <input class="form-control" id="key-select" placeholder="key">
+        <button type="submit" class="btn btn-dark click">send to cue</button>
       </form>
+      <div class="status-text-light" id="add-song-result">
+     </div>
 
     </div>
 
