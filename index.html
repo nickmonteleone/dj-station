@@ -12,118 +12,118 @@
   <link rel="stylesheet" href="dj-station.css" />
 </head>
 
-<body class="body-background">
+<body>
 
   <section class="title-background">
     <h1 class="title-text">
       620 7th Ave DJ Station
     </h1>
   </section>
-  <br>
-  <section class="decks-box">
 
-    <div class="side-box left-box">
-      <img class="deck-image" src="images/golden-gate.png">
-      <img class="record-image" src="images/vinyl.png">
-      <div class="deck-title">Deck A</div>
-      <br>
-      <img class="cover-art" src="images/album-a.jpg" id="cover-art-a">
-      <div class="song-text" id="song-a">
-        My Love
-      </div>
-      <div class="artist-text" id="artist-a">
-        Justin Timberlake
-      </div>
-      <br>
-    </div>
+  <div class="container-fluid">
 
-    <div class="center-box">
+    <section class="decks-box">
 
-      <img class="dj-image" src="images/dj.png" id="dj-image">
-
-      <div class="status-box" id="a-status-box">
-        <div class="status-type-bar">
-          <div class="status-text-light" id="a-status">
-            Now playing:
-          </div>
-          <div class="status-text-bold">
-            &nbsp;Deck A
-          </div>
-        </div>
-        <div class="status-bar left-status-bar">
-          <div class="left-status-filler"></div>
-          <div class="status-bar-text-box">
-            <div class="status-text-light">
-              <span class="status-text-light" id="bpm-a">126.4</span>
-               BPM
-            </div>
-            <div class="status-text-light">
-              Key: <span class="status-text-light" id="key-a">G#</span>
-            </div>
-          </div>
-        </div>
+      <div class="side-box left-box">
+        <img class="deck-image" src="images/golden-gate.png">
+        <img class="record-image" src="images/vinyl.png">
+        <div class="deck-title">Deck A</div>
         <br>
-      </div>
-      <div class="status-box" id="b-status-box">
-        <div class="status-type-bar">
-          <div class="status-text-light" id="b-status">
-            In the cue:
-          </div>
-          <div class="status-text-bold" >
-            &nbsp;Deck B
-          </div>
+        <img class="cover-art" src="images/album-a.jpg" id="cover-art-a">
+        <div class="song-text" id="song-a">
+          My Love
         </div>
-        <div class="status-bar right-status-bar">
-          <div class="status-bar-text-box">
-            <div class="status-text-light">
-              <span class="status-text-light" id="bpm-b">127.2</span>
-               BPM
-            </div>
-            <div class="status-text-light">
-              Key: <span class="status-text-light" id="key-b">A</span>
-            </div>
-          </div>
-          <div class="right-status-filler"></div>
+        <div class="artist-text" id="artist-a">
+          Justin Timberlake
         </div>
         <br>
       </div>
 
-     <button type="submit" class="btn btn-dark click" id="swap-button">
-        swap play/cue
-      </button>
-      <br>
+      <div class="center-box">
+        <img class="dj-image" src="images/dj.png" id="dj-image">
+        <div class="status-box" id="a-status-box">
+          <div class="status-type-bar">
+            <div class="status-text-light" id="a-status">
+              Now playing:
+            </div>
+            <div class="status-text-bold">
+              &nbsp;Deck A
+            </div>
+          </div>
+          <div class="status-bar left-status-bar">
+            <div class="left-status-filler"></div>
+            <div class="status-bar-text-box">
+              <div class="status-text-light">
+                <span class="status-text-light" id="bpm-a">126.4</span>
+                BPM
+              </div>
+              <div class="status-text-light">
+                Key: <span class="status-text-light" id="key-a">G#</span>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+        <div class="status-box" id="b-status-box">
+          <div class="status-type-bar">
+            <div class="status-text-light" id="b-status">
+              In the cue:
+            </div>
+            <div class="status-text-bold">
+              &nbsp;Deck B
+            </div>
+          </div>
+          <div class="status-bar right-status-bar">
+            <div class="status-bar-text-box">
+              <div class="status-text-light">
+                <span class="status-text-light" id="bpm-b">127.2</span>
+                BPM
+              </div>
+              <div class="status-text-light">
+                Key: <span class="status-text-light" id="key-b">A</span>
+              </div>
+            </div>
+            <div class="right-status-filler"></div>
+          </div>
+          <br>
+        </div>
 
-      <div class="status-text-light">
-         Add next song:
+        <button type="submit" class="btn btn-dark click" id="swap-button">
+          swap play/cue
+        </button>
+        <br>
+
+        <div class="status-text-light">
+          Add next song:
+        </div>
+        <form class="song-form" autocomplete="off">
+          <input type="text" class="form-control" id="song-select" placeholder="song" required="true">
+          <input type="text" class="form-control" id="artist-select" placeholder="artist">
+          <input type="number" step="0.1" class="form-control" id="bpm-select" placeholder="BPM">
+          <input type="text" class="form-control" id="key-select" placeholder="key">
+          <button type="submit" class="btn btn-dark click">send to cue</button>
+        </form>
+        <div class="status-text-light" id="add-song-result">
+        </div>
       </div>
-      <form class="song-form" autocomplete="off">
-        <input type="text" class="form-control" id="song-select" placeholder="song" required="true">
-        <input type="text" class="form-control" id="artist-select" placeholder="artist">
-        <input type="number" step="0.1" class="form-control" id="bpm-select" placeholder="BPM">
-        <input type="text" class="form-control" id="key-select" placeholder="key">
-        <button type="submit" class="btn btn-dark click">send to cue</button>
-      </form>
-      <div class="status-text-light" id="add-song-result">
-     </div>
 
-    </div>
-
-
-    <div class="side-box right-box">
-      <img class="deck-image" src="images/buffalo.png">
-      <img class="record-image" src="images/vinyl.png">
-      <div class="deck-title">Deck B</div>
-      <br>
-      <img class="cover-art" src="images/album-b.jpg" id="cover-art-b">
-      <div class="song-text" id="song-b">
-        Closer
+      <div class="side-box right-box">
+        <img class="deck-image" src="images/buffalo.png">
+        <img class="record-image" src="images/vinyl.png">
+        <div class="deck-title">Deck B</div>
+        <br>
+        <img class="cover-art" src="images/album-b.jpg" id="cover-art-b">
+        <div class="song-text" id="song-b">
+          Closer
+        </div>
+        <div class="artist-text" id="artist-b">
+          The Chainsmokers
+        </div>
       </div>
-      <div class="artist-text" id="artist-b">
-        The Chainsmokers
-      </div>
-      <br>
-    </div>
-  </section>
+
+    </section>
+
+  </div>
 
 
   <script src="dj-station.js"></script>

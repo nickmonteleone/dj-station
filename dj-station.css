@@ -12,10 +12,7 @@
   line-height: normal;
 }
 
-.body-background {
-  /* commented out color for deck a/b background */
-  /* background: #FDE2AB; */
-  /* background: #8ADCFF; */
+body {
   background: #d6d6d6;
 }
 
@@ -49,7 +46,7 @@
 .side-box {
   display: flex;
   width: 20%;
-  min-width: 105px;
+  min-width: 90px;
   max-width: 200px;
   border: 1px solid #000;
   flex-direction: column;
